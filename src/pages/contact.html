@@ -1,0 +1,50 @@
+<!-- title: Contact | AccessAble -->
+<!-- description: Book Nora Giannetti for your next keynote, conference, networking event, corporate workshop or campus program. -->
+<!-- nav: contact -->
+
+<main id="main">
+<section class="section bg-ivory">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Book Nora</span>
+      <h1 class="display" style="font-size:clamp(52px,6vw,92px);margin:22px 0 24px">Let's <em>talk.</em></h1>
+      <p class="lead">Conference, networking event, workshop or campus program? Tell me about your audience and what you have in mind.</p>
+      <p class="lead" style="margin-top:20px;font-size:16px">Podcast guest or collab idea? Send that here too. Every message comes straight to me.</p>
+    </div>
+    <div class="formcard">
+      <form id="cform" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="184c2f9e-8b70-4bb5-9a95-550247ccffca">
+        <input type="hidden" name="subject" value="New message from accessableco.com">
+        <input type="hidden" name="from_name" value="AccessAble website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+        <div class="fld"><label for="name">Name *</label><input id="name" name="name" type="text" required autocomplete="name"></div>
+        <div class="fld"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="fld"><label for="topic">What's this about?</label>
+          <select id="topic" name="topic"><option value="">Pick one</option><option>Book me to speak</option><option>Workshops</option><option>Be a podcast guest</option><option>Collab</option><option>Just saying hi</option></select></div>
+        <div class="fld"><label for="message">Message *</label><textarea id="message" name="message" required></textarea></div>
+        <p class="formerr" id="formerr" role="alert"></p>
+        <button class="btn btn-solid" type="submit" id="sendbtn">Send it</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<script>
+(function(){
+  var form=document.getElementById('cform'), box=document.getElementById('form-box'), err=document.getElementById('formerr'), btn=document.getElementById('sendbtn');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.textContent='';
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    btn.disabled=true; btn.textContent='Sending…';
+    var data=Object.fromEntries(new FormData(form));
+    fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success){ box.innerHTML='<div class="thanks"><h3>Thank you!</h3><p>Got it. I\'ll get back to you soon.</p></div>'; }
+        else { throw new Error(j.message||'Something went wrong.'); }
+      })
+      .catch(function(){ err.textContent='That didn\'t send. Please try again in a minute.'; btn.disabled=false; btn.textContent='Send it'; });
+  });
+})();
+</script>

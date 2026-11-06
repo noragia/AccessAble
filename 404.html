@@ -1,46 +1,87 @@
 <!doctype html>
 <html lang="en">
 <head>
+<base href="https://accessableco.com/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found | AccessAble</title>
 <meta name="description" content="This page doesn't exist.">
-<link rel="icon" href="/logo.svg">
+<meta property="og:title" content="Page not found | AccessAble">
+<meta property="og:description" content="This page doesn't exist.">
+<meta property="og:image" content="https://accessableco.com/images/nora-speaking.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=30">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=40">
 </head>
-<body>
-<script>document.body.classList.add('js')</script>
-<header>
+<body class="">
+<script>document.documentElement.classList.add('js')</script>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
   <div class="wrap nav">
-    <a href="/" aria-label="AccessAble home"><span class="logo"></span></a>
-    <nav class="links"><a href="/index.html#speaking">Speaking</a><a href="/index.html#podcast">Podcast</a><a href="/past-events.html">Past Events</a><a href="/substack.html">Substack</a><a href="/index.html#about">About</a><a href="/contact.html">Contact</a></nav>
-    <a class="btn btn-solid" href="/contact.html">Book Nora</a>
-    <button class="burger" aria-label="Open menu" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+    <a class="brand" href="index.html" aria-label="AccessAble home"><span class="logo"></span></a>
+    <nav class="links" aria-label="Main">
+      <a href="about.html" data-nav="about">About</a>
+      <a href="work.html" data-nav="work">The Work</a>
+      <a href="speaking.html" data-nav="speaking">Speaking</a>
+      <a href="told-ya.html" data-nav="told-ya">Told Ya</a>
+      <a href="https://substack.com/@accessableco" target="_blank" rel="noopener">Writing <span aria-hidden="true">↗</span></a>
+    </nav>
+    <a class="btn btn-solid nav-cta" href="contact.html">Book Nora</a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
   </div>
-  <div class="mobile" id="m" onclick="this.classList.remove('open')"><a href="/index.html#speaking">Speaking</a><a href="/index.html#podcast">Podcast</a><a href="/past-events.html">Past Events</a><a href="/substack.html">Substack</a><a href="/index.html#about">About</a><a href="/contact.html">Contact</a></div>
+  <div class="drawer" id="drawer" hidden>
+    <nav class="wrap" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">The Work</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="told-ya.html">Told Ya</a>
+      <a href="https://substack.com/@accessableco" target="_blank" rel="noopener">Writing ↗</a>
+      <a class="btn btn-solid" href="contact.html">Book Nora</a>
+    </nav>
+  </div>
 </header>
-<main>
-<section class="closing bg-ivory" style="padding:160px 0">
+<main id="main">
+<section class="section bg-ivory cta-band" style="padding:160px 0">
   <div class="wrap">
-    <span class="label">404</span>
+    <span class="eyebrow">404</span>
     <h1 class="h2">This page <em>doesn't exist.</em></h1>
-    <div class="actions"><a class="btn btn-solid" href="/">Back home</a></div>
+    <p class="lead" style="margin:20px auto 0">Which, honestly, is a very on-brand thing to run into. Let's get you somewhere real.</p>
+    <div class="actions"><a class="btn btn-solid" href="index.html">Back home</a></div>
   </div>
 </section>
 </main>
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-grid">
-      <a href="/" aria-label="AccessAble home"><span class="logo"></span></a>
-      <div class="foot-links">
-        <a href="https://substack.com/@accessableco" target="_blank" rel="noopener">Substack</a><a href="https://open.spotify.com/show/6p7uLs3DhibtHHBk8X5RID" target="_blank" rel="noopener">Spotify</a><a href="https://www.instagram.com/accessableco" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@noragia" target="_blank" rel="noopener">TikTok</a><a href="https://www.linkedin.com/in/nora-giannetti" target="_blank" rel="noopener">LinkedIn</a><a href="/contact.html">Contact</a>
+    <div class="foot-top">
+      <div>
+        <span class="logo"></span>
+        <p class="foot-line">Unlearn your limits. Go after what you want.</p>
       </div>
+      <a class="btn btn-light" href="contact.html">Book Nora</a>
     </div>
-    <p class="copy">© 2026 AccessAble. All rights reserved.</p>
+    <div class="foot-grid">
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="work.html">The Work</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="told-ya.html">Told Ya</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="Elsewhere">
+        <a href="https://substack.com/@accessableco" target="_blank" rel="noopener">Substack ↗</a>
+        <a href="https://open.spotify.com/show/6p7uLs3DhibtHHBk8X5RID" target="_blank" rel="noopener">Spotify ↗</a>
+        <a href="https://www.instagram.com/accessableco" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@noragia" target="_blank" rel="noopener">TikTok ↗</a>
+        <a href="https://www.linkedin.com/in/nora-giannetti" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </nav>
+    </div>
+    <p class="copy">© 2026 AccessAble</p>
   </div>
 </footer>
+<script src="site.js?v=40" defer></script>
 </body>
 </html>
