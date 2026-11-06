@@ -13,7 +13,7 @@ import pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
-VERSION = "40"
+VERSION = "41"
 
 def part(name):
     return (SRC / "partials" / name).read_text()
