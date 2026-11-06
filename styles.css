@@ -145,7 +145,7 @@ body.menu-open{overflow:hidden}
 .pod{padding:clamp(70px,8vw,110px) 0}
 .pod-grid{display:grid;grid-template-columns:260px minmax(0,1fr) auto;gap:clamp(30px,5vw,70px);align-items:center}
 .pod-art{background:#fff;aspect-ratio:1/1;display:grid;place-items:center;border:1px solid var(--line)}
-.pod-art img{width:82%;mix-blend-mode:multiply}
+.pod-art img{width:82%;mix-blend-mode:multiply;filter:brightness(1.08) contrast(1.15)}
 .pod .h3{margin:14px 0 10px}
 .pod p{color:var(--muted);max-width:30em}
 .pod .actions{margin-top:0;flex-direction:column;align-items:flex-start;gap:18px}
@@ -160,6 +160,7 @@ body.menu-open{overflow:hidden}
 .page-hero .display{font-size:clamp(52px,6.6vw,100px);margin:22px 0 26px;max-width:11em}
 .split{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,7vw,110px);align-items:start}
 .split .h3{margin-top:16px}
+.split > .sticky{position:sticky;top:120px}
 .prose p{color:var(--muted);margin-bottom:18px;max-width:36em}
 .prose p strong{color:var(--ink);font-weight:500}
 .moments{border-top:1px solid var(--line-strong)}
@@ -173,7 +174,7 @@ body.menu-open{overflow:hidden}
 .receipts div:last-child{border-bottom:0;padding-bottom:0}
 .receipts dt{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,240,233,.72);margin-bottom:6px}
 .receipts dd{font-family:var(--serif);font-size:25px;line-height:1.25}
-.pillar{padding:clamp(70px,9vw,120px) 0;border-top:1px solid var(--line)}
+.pillar{padding-top:clamp(70px,9vw,120px);padding-bottom:clamp(70px,9vw,120px);border-top:1px solid var(--line)}
 .pillar:first-of-type{border-top:0}
 .pillar .n{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--quiet)}
 .pillar .h2{margin:14px 0 0}
@@ -229,6 +230,7 @@ body.menu-open{overflow:hidden}
   .hero{grid-template-columns:1fr;min-height:0;max-height:none}
   .hero-copy{padding:56px var(--gutter) 48px}
   .hero-media{aspect-ratio:4/5;max-height:78vh}
+  .split > .sticky{position:static}
   .idea-grid,.about-row,.speak-grid,.writing-grid,.split,.event{grid-template-columns:1fr}
   .index a{grid-template-columns:44px minmax(0,1fr) 24px;gap:6px 16px}
   .index p{grid-column:2/3}
