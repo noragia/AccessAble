@@ -243,3 +243,13 @@ body.menu-open{overflow:hidden}
   .moments li{grid-template-columns:1fr;gap:6px}
   .photo-band img{aspect-ratio:4/3}
 }
+
+/* banner strip */
+.banner{background:var(--stone);border-top:1px solid rgba(29,43,76,.15);border-bottom:1px solid rgba(29,43,76,.15);overflow:hidden;padding:22px 0}
+.banner-track{display:flex;width:max-content;animation:banner 40s linear infinite}
+.banner-set{display:flex;align-items:center;flex-shrink:0}
+.banner span{font:600 15px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--navy);white-space:nowrap;padding:0 28px}
+.banner i{font-style:normal;color:var(--navy);opacity:.55;font-size:13px}
+@keyframes banner{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.banner-track{animation:none}}
+@media (max-width:1020px){.banner{padding:16px 0}.banner span{font-size:13px;padding:0 20px}}
