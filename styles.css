@@ -253,3 +253,7 @@ body.menu-open{overflow:hidden}
 @keyframes banner{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.banner-track{animation:none}}
 @media (max-width:1020px){.banner{padding:16px 0}.banner span{font-size:13px;padding:0 20px}}
+
+/* coaching steps */
+.bring.steps{grid-template-columns:1fr}
+.bring.steps li,.bring.steps li+li{padding:26px 0;border-left:0;border-bottom:1px solid var(--line)}
