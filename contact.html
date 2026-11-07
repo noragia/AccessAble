@@ -81,12 +81,13 @@
     btn.disabled=true; btn.textContent='Sending…';
     var data=Object.fromEntries(new FormData(form));
     fetch(form.action,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)})
-      .then(function(r){return r.json();})
+      .then(function(r){ return r.text().then(function(t){ var j={}; try{ j=JSON.parse(t); }catch(x){} j._status=r.status; return j; }); })
       .then(function(j){
-        if(j.success){ box.innerHTML='<div class="thanks"><h3>Thank you!</h3><p>Got it. I\'ll get back to you soon.</p></div>'; }
-        else { throw new Error(j.message||'Something went wrong.'); }
+        if(j.success){ box.innerHTML='<div class="thanks"><h3>Thank you!</h3><p>Got it. I\'ll get back to you soon.</p></div>'; return; }
+        err.textContent='That didn\'t send. ('+(j.message||('Error '+j._status))+')';
+        btn.disabled=false; btn.textContent='Send it';
       })
-      .catch(function(){ err.textContent='That didn\'t send. Please try again in a minute.'; btn.disabled=false; btn.textContent='Send it'; });
+      .catch(function(){ form.submit(); });
   });
 })();
 </script>
