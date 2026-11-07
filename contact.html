@@ -54,6 +54,7 @@
       <p class="lead" style="margin-top:20px;font-size:16px">Not ready to book? <a class="text-link" href="https://substack.com/@accessableco" target="_blank" rel="noopener">Follow along on Substack <span class="arr" aria-hidden="true">↗</span></a></p>
     </div>
     <div class="formcard">
+      <div id="form-box">
       <form id="cform" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="184c2f9e-8b70-4bb5-9a95-550247ccffca">
         <input type="hidden" name="subject" value="New message from accessableco.com">
@@ -67,6 +68,7 @@
         <p class="formerr" id="formerr" role="alert"></p>
         <button class="btn btn-solid" type="submit" id="sendbtn">Send it</button>
       </form>
+      </div>
     </div>
   </div>
 </section>
@@ -87,7 +89,7 @@
         err.textContent='That didn\'t send. ('+(j.message||('Error '+j._status))+')';
         btn.disabled=false; btn.textContent='Send it';
       })
-      .catch(function(){ form.submit(); });
+      .catch(function(){ err.textContent='That didn\'t send. Please try again in a minute.'; btn.disabled=false; btn.textContent='Send it'; });
   });
 })();
 </script>
