@@ -29,6 +29,6 @@ window.OWN_THE_ROOM = {
        https://calendly.com/your-name/30min
      Leave it empty ("") and the booking section shows a "message me" fallback
      instead of a calendar. */
-  calendlyUrl: ""
+  calendlyUrl: "https://calendly.com/nora-accessableco/30min"
 
 };
