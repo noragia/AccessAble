@@ -14,14 +14,14 @@ window.OWN_THE_ROOM = {
        • a Loom link      e.g. https://www.loom.com/share/abc123
        • a video file     e.g. images/own-the-room.mp4  (upload it to the images folder first)
      Leave it empty ("") and the page shows a placeholder. */
-  videoUrl: "",
+  videoUrl: "images/own-the-room.mp4",
 
   /* Shape of the video: "wide" (landscape, 16:9) or "vertical" (filmed on your phone, 9:16) */
   videoShape: "wide",
 
   /* Cover image shown before someone presses play (video files only).
      YouTube, Vimeo and Loom use their own cover. */
-  videoPoster: "images/nora-speaking.jpg",
+  videoPoster: "images/own-the-room-poster.jpg",
 
 
   /* 2. YOUR CALENDLY LINK
