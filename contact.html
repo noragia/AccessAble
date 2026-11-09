@@ -43,15 +43,20 @@
     </nav>
   </div>
 </header>
+<link rel="stylesheet" href="pages.css?v=1">
+
 <main id="main">
-<section class="section bg-ivory">
-  <div class="wrap split">
-    <div>
-      <span class="eyebrow">Book Nora</span>
-      <h1 class="display" style="font-size:clamp(52px,6vw,92px);margin:22px 0 24px">Let's <em>talk.</em></h1>
-      <p class="lead">Conference, networking event, workshop or campus program? Tell me about your audience and what you have in mind.</p>
-      <p class="lead" style="margin-top:20px;font-size:16px">Podcast guest or collab idea? Send that here too. Every message comes straight to me.</p>
-      <p class="lead" style="margin-top:20px;font-size:16px">Not ready to book? <a class="text-link" href="https://substack.com/@accessableco" target="_blank" rel="noopener">Follow along on Substack <span class="arr" aria-hidden="true">↗</span></a></p>
+<section class="o-sec o-dark" aria-labelledby="c-title">
+  <div class="wrap o-split is-top">
+    <div class="rv">
+      <span class="o-tag">Book Nora</span>
+      <h1 class="o-h1" id="c-title">Let's <em>talk.</em></h1>
+      <p class="o-lede">Conference, networking event, workshop or campus program? Tell me about your audience and what you have in mind.</p>
+      <div class="o-contact-notes">
+        <p>Podcast guest or collab idea? Send that here too. Every message comes straight to me.</p>
+        <p>Interested in Own the Room? <a href="https://calendly.com/nora-accessableco/30min" target="_blank" rel="noopener">Book a free 30-minute call ↗</a></p>
+        <p>Not ready to book? <a href="https://substack.com/@accessableco" target="_blank" rel="noopener">Follow along on Substack ↗</a></p>
+      </div>
     </div>
     <div class="formcard">
       <div id="form-box">
@@ -66,7 +71,7 @@
           <select id="topic" name="topic"><option value="">Pick one</option><option>Book me to speak</option><option>Workshops</option><option>Be a podcast guest</option><option>Collab</option><option>Just saying hi</option></select></div>
         <div class="fld"><label for="message">Message *</label><textarea id="message" name="message" required></textarea></div>
         <p class="formerr" id="formerr" role="alert"></p>
-        <button class="btn btn-solid" type="submit" id="sendbtn">Send it</button>
+        <button class="o-btn o-btn-dark" type="submit" id="sendbtn" style="width:100%">Send it</button>
       </form>
       </div>
     </div>
