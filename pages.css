@@ -200,3 +200,14 @@ a.o-card:hover{transform:translateY(-6px)}
 .s-stages h3{font:600 clamp(30px,3.6vw,52px)/1.05 var(--sans);letter-spacing:-.035em;color:var(--ink)}
 .s-stages p{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.2vw,32px);line-height:1.2;color:var(--gold-deep)}
 @media (max-width:700px){.s-stages li{grid-template-columns:1fr;gap:10px}}
+
+/* ── Speaking: testimonials ── */
+.s-quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2vw,24px);margin-top:clamp(40px,5vw,60px);align-items:start}
+.s-quote{margin:0;background:var(--o-ink);color:var(--ivory);padding:clamp(28px,3vw,44px);position:relative}
+.s-quote::before{content:"“";display:block;font-family:var(--serif);font-size:72px;line-height:.6;color:var(--gold);margin-bottom:14px}
+.s-quote blockquote{margin:0;font-size:clamp(17px,1.4vw,19px);line-height:1.55;color:rgba(244,240,233,.9)}
+.s-quote figcaption{margin-top:22px;font:600 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.s-quote.is-gold{background:var(--gold);color:var(--o-ink)}
+.s-quote.is-gold::before,.s-quote.is-gold figcaption{color:var(--o-ink)}
+.s-quote.is-gold blockquote{color:rgba(15,22,38,.88)}
+@media (max-width:800px){.s-quotes{grid-template-columns:1fr}}
