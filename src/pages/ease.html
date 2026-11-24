@@ -1,0 +1,167 @@
+<!-- title: Ease by AccessAble | Real accessibility reviews for hotels -->
+<!-- description: Ease is where people with disabilities rate hotels on what it's really like to stay there, so you know before you book. -->
+<!-- nav: ease -->
+
+<link rel="stylesheet" href="pages.css?v=2">
+<style>
+  /* Ease page */
+  .e-hero{padding:clamp(64px,8vw,120px) 0 clamp(72px,9vw,130px);overflow:hidden}
+  .e-logo{width:clamp(170px,16vw,220px);margin-bottom:clamp(34px,4vw,52px)}
+  .e-hero .o-h1{max-width:9.5em}
+  .e-sub{font:600 11px/1.6 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:rgba(244,240,233,.6);margin-top:18px}
+
+  /* phone */
+  .e-phone-wrap{display:flex;justify-content:center;position:relative}
+  .e-phone-wrap::before{content:"";position:absolute;width:118%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(201,162,77,.25);top:50%;left:50%;transform:translate(-50%,-50%)}
+  .e-phone{position:relative;width:min(330px,82vw);aspect-ratio:9/18.5;border-radius:46px;background:#05080f;padding:12px;box-shadow:0 40px 90px rgba(0,0,0,.45),0 0 0 1px rgba(201,162,77,.35)}
+  .e-screen{height:100%;border-radius:36px;background:var(--white);color:var(--navy);overflow:hidden;display:flex;flex-direction:column}
+  .e-bar{display:flex;justify-content:center;padding:14px 0 6px}
+  .e-bar span{width:90px;height:24px;border-radius:20px;background:#05080f}
+  .e-app-top{display:flex;align-items:center;justify-content:space-between;padding:10px 20px 14px;border-bottom:1px solid var(--line)}
+  .e-app-top img{width:92px}
+  .e-app-top i{width:26px;height:26px;border-radius:50%;background:var(--stone)}
+  .e-app-body{padding:18px 18px 0;display:flex;flex-direction:column;gap:12px}
+  .e-search{border:1px solid var(--line-strong);padding:11px 14px;font-size:12px;color:var(--quiet)}
+  .e-label{font:600 9px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-top:4px}
+  .e-hotel{border:1px solid var(--line);background:#fff;padding:14px}
+  .e-hotel-img{height:86px;background:linear-gradient(135deg,#2a3a5e,#0f1626);margin:-14px -14px 12px;position:relative}
+  .e-hotel-img::after{content:"";position:absolute;inset:auto 12px 10px auto;width:34px;height:2px;background:var(--gold)}
+  .e-hotel b{display:block;font-size:14px;letter-spacing:-.01em}
+  .e-hotel small{display:block;font-size:11px;color:var(--quiet);margin-top:2px}
+  .e-hotel-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+  .e-score{font:600 22px/1 var(--sans);letter-spacing:-.03em}
+  .e-score span{display:block;font:600 8px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--quiet);margin-bottom:5px}
+  .e-doors{display:flex;gap:5px;color:var(--navy)}
+  .e-doors svg{width:13px;height:20px}
+
+  /* door marks */
+  .e-door{display:inline-flex;gap:8px;color:var(--gold)}
+  .e-door svg{width:22px;height:34px}
+  .o-card.is-gold .e-door{color:var(--o-ink)}
+  .e-levels .o-card h3{padding-top:40px}
+
+  .e-rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(244,240,233,.14);margin-top:clamp(40px,5vw,60px);border:1px solid rgba(244,240,233,.14)}
+  .e-rules li{background:var(--o-ink);padding:26px 22px}
+  .e-rules b{display:block;font:600 clamp(30px,3vw,42px)/1 var(--sans);letter-spacing:-.04em;color:var(--gold)}
+  .e-rules span{display:block;font-size:14px;color:rgba(244,240,233,.75);margin-top:10px;line-height:1.5}
+
+  .e-icon{width:clamp(110px,11vw,150px);border-radius:28px;box-shadow:0 24px 60px rgba(15,22,38,.25);margin:0 auto 34px}
+  @media (max-width:1020px){
+    .e-phone-wrap{margin-top:30px}
+    .e-rules{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:600px){.e-rules{grid-template-columns:1fr}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="door" viewBox="0 0 22 34"><rect x="1" y="1" width="20" height="32" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="1.4" fill="currentColor"/></symbol>
+</svg>
+
+<main id="main">
+
+<!-- ═════════ HERO ═════════ -->
+<section class="o-hero e-hero" aria-labelledby="e-title">
+  <div class="wrap o-hero-split">
+    <div class="rv">
+      <img class="e-logo" src="images/ease-logo-light.png" alt="Ease by AccessAble">
+      <h1 class="o-h1" id="e-title">ADA compliant doesn't mean <em>easy to use.</em></h1>
+      <p class="o-lede">Ease is where people with disabilities rate hotels on what it's really like to stay there, so you know before you book.</p>
+      <div class="o-actions">
+        <a class="o-btn" href="https://access-able-stays.base44.app" target="_blank" rel="noopener" data-app-link>Get the app <span aria-hidden="true">→</span></a>
+        <a class="o-link" href="#doors">How the Doors work <span aria-hidden="true">→</span></a>
+      </div>
+      <p class="e-sub">Free · Works on any phone or computer</p>
+    </div>
+
+    <div class="e-phone-wrap rv" aria-hidden="true">
+      <div class="e-phone">
+        <div class="e-screen">
+          <div class="e-bar"><span></span></div>
+          <div class="e-app-top"><img src="images/ease-logo-dark.png" alt=""><i></i></div>
+          <div class="e-app-body">
+            <div class="e-search">Search a hotel or city</div>
+            <div class="e-label">Example listings</div>
+            <div class="e-hotel">
+              <div class="e-hotel-img"></div>
+              <b>The Harborview Hotel</b>
+              <small>Boston, MA · 64 reviews</small>
+              <div class="e-hotel-row">
+                <div class="e-score"><span>Access Score</span>92</div>
+                <div class="e-doors"><svg><use href="#door"/></svg><svg><use href="#door"/></svg><svg><use href="#door"/></svg></div>
+              </div>
+            </div>
+            <div class="e-hotel">
+              <b>The Example Inn</b>
+              <small>Boston, MA · 51 reviews</small>
+              <div class="e-hotel-row">
+                <div class="e-score"><span>Access Score</span>84</div>
+                <div class="e-doors"><svg><use href="#door"/></svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ HOW IT WORKS ═════════ -->
+<section class="o-sec o-cream" aria-labelledby="e-how">
+  <div class="wrap">
+    <span class="o-tag rv">How it works</span>
+    <h2 class="o-h2 rv" id="e-how">Real stays. <em>Real reviews.</em></h2>
+    <div class="o-cards">
+      <div class="o-card rv"><span class="o-num">01</span><h3>Rate your stay</h3><p>Score the entrance, front desk, elevators, room, bathroom and amenities, and say what the hotel got right and wrong.</p></div>
+      <div class="o-card is-gold rv"><span class="o-num">02</span><h3>Get the Access Score</h3><p>Every review counts toward the hotel's Access Score out of 100. Good or bad, every review counts.</p></div>
+      <div class="o-card rv"><span class="o-num">03</span><h3>Book with confidence</h3><p>Know if you can actually get around before you get there. No more calling ahead and hoping.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ THE DOORS ═════════ -->
+<section class="o-sec o-dark" id="doors" aria-labelledby="e-doors">
+  <div class="wrap">
+    <span class="o-tag rv">The Doors</span>
+    <h2 class="o-h2 rv" id="e-doors">The best hotels <em>earn their Doors.</em></h2>
+    <p class="o-lede rv">Scores come from guests. Doors come from AccessAble, after an in-person walkthrough.</p>
+    <div class="o-cards e-levels">
+      <div class="o-card rv" style="background:#16203a"><span class="e-door"><svg><use href="#door"/></svg></span><h3>One Door</h3><p>Easy to navigate. Guests can get around the whole hotel, accommodations are there when needed, and most things are within reach.</p></div>
+      <div class="o-card rv" style="background:#16203a"><span class="e-door"><svg><use href="#door"/></svg><svg><use href="#door"/></svg></span><h3>Two Doors</h3><p>Above and beyond. Standout amenities and bathrooms, and accessible options beyond the standard room.</p></div>
+      <div class="o-card is-gold rv"><span class="e-door"><svg><use href="#door"/></svg><svg><use href="#door"/></svg><svg><use href="#door"/></svg></span><h3>Three Doors</h3><p>Exceptional everywhere. Service that goes above and beyond, and accessible options in every room type, suites included. Very few hotels will earn this.</p></div>
+    </div>
+    <ul class="e-rules rv">
+      <li><b>50+</b><span>reviews before a hotel can be considered</span></li>
+      <li><b>80 / 90 / 95</b><span>Access Score needed for One, Two or Three Doors</span></li>
+      <li><b>3 years</b><span>Doors are renewed every three years</span></li>
+      <li><b>$0</b><span>Hotels can never pay for a score or for Doors</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════ HOTELS ═════════ -->
+<section class="o-sec o-white" aria-labelledby="e-hotels">
+  <div class="wrap o-split">
+    <div class="rv">
+      <span class="o-tag">For hotels</span>
+      <h2 class="o-h2" id="e-hotels">Your guests are <em>already rating you.</em></h2>
+    </div>
+    <div class="rv">
+      <p class="o-lede" style="margin-top:0">See what guests with disabilities say about your property, respond to reviews, and work with AccessAble to improve your score and show off what you do well.</p>
+      <div class="o-actions"><a class="o-btn o-btn-dark" href="consulting.html">Work with AccessAble <span aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ CTA ═════════ -->
+<section class="o-sec o-cream o-cta" aria-labelledby="e-cta">
+  <div class="wrap">
+    <img class="e-icon rv" src="images/ease-app-icon.png" alt="Ease app icon">
+    <h2 class="o-h2 rv" id="e-cta">Know before <em>you book.</em></h2>
+    <p class="o-lede o-center rv">Rate the last hotel you stayed at. It takes five minutes and helps the next person decide.</p>
+    <div class="o-actions rv">
+      <a class="o-btn o-btn-dark" href="https://access-able-stays.base44.app" target="_blank" rel="noopener" data-app-link>Get the app <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
