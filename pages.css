@@ -171,3 +171,4 @@ a.o-card:hover{background:var(--white);border-color:var(--line-strong)}
   .h-rows a:hover{padding-left:0}
 }
 .o-photo img.s-stage-photo{object-position:68% 60%}
+.home .o-hero{padding:clamp(90px,12vw,180px) 0 clamp(60px,7vw,100px)}
