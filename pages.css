@@ -216,5 +216,3 @@ a.o-card:hover{transform:translateY(-6px)}
 .s-students{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,4vw,56px);margin-top:clamp(24px,3vw,36px);border-top:1px solid var(--line-strong)}
 .s-students li{font-family:var(--serif);font-style:italic;font-size:clamp(21px,1.9vw,27px);line-height:1.3;color:var(--ink);padding:clamp(20px,2.2vw,28px) 0;border-bottom:1px solid var(--line-strong)}
 @media (max-width:800px){.s-students{grid-template-columns:1fr}}
-.o-cards.is-two{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:1020px){.o-cards.is-two{grid-template-columns:1fr}}
